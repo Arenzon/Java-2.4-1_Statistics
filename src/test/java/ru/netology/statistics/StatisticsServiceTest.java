@@ -1,72 +1,71 @@
 package ru.netology.statistics;
 
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class StatisticsServiceTest {
 
     @org.junit.jupiter.api.Test
-    void sumArray() {
+    void sumArray () {
         StatisticsService service = new StatisticsService();
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 180;
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 180;
 
-        long actual = service.calculateSum(sales);
+        int actual = service.calculateSum(sales);
 
         assertEquals(expected, actual);
     }
 
     @org.junit.jupiter.api.Test
-    void arithmeticMean() {
+    void arithmeticMean () {
         StatisticsService service = new StatisticsService();
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        double expected = 15;
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 15;
 
-        double actual = service.arithmeticMean(sales);
+        int actual = service.arithmeticMean(sales);
 
         assertEquals(expected, actual);
     }
 
     @org.junit.jupiter.api.Test
-    void montOfMaxSale() {
+    void montOfMaxSale () {
         StatisticsService service = new StatisticsService();
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 8;
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 8;
 
-        long actual = service.monthOfMaxSale(sales);
+        int actual = service.monthOfMaxSale(sales);
 
         assertEquals(expected, actual);
     }
 
     @org.junit.jupiter.api.Test
-    void montOfMinSale() {
+    void montOfMinSale () {
         StatisticsService service = new StatisticsService();
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 9;
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 9;
 
-        long actual = service.monthOfMinSale(sales);
+        int actual = service.monthOfMinSale(sales);
 
         assertEquals(expected, actual);
     }
 
     @org.junit.jupiter.api.Test
-    void sumMontMinMean() {
+    void sumMontMinMean () {
         StatisticsService service = new StatisticsService();
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 5;
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 5;
 
-        long actual = service.sumMonthMinMean(sales);
+        int actual = service.sumMonthMinMean(sales);
 
         assertEquals(expected, actual);
     }
-    @org.junit.jupiter.api.Test
-    void sumMontMaxMean() {
-        StatisticsService service = new StatisticsService();
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        long expected = 5;
 
-        long actual = service.sumMonthMaxMean(sales);
+    @org.junit.jupiter.api.Test
+    void sumMontMaxMean () {
+        StatisticsService service = new StatisticsService();
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        int expected = 5;
+
+        int actual = service.sumMonthMaxMean(sales);
 
         assertEquals(expected, actual);
     }
